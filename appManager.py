@@ -6,7 +6,7 @@ import sys
 APP_PATHS = {
     "chrome": r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
     "microsoft": r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
-    "notepad": "notepad.exe",
+    # "notepad": "notepad.exe",
     "studio": r"C:\Users\sayan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Visual Studio Code\Visual Studio Code.lnk",
     "downloads": r"C:\Users\sayan\Downloads",
     "documents": r"C:\Users\sayan\Documents",

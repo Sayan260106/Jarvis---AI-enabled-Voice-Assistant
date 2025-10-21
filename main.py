@@ -8,6 +8,8 @@ import speech_recognition as sr
 import pyttsx3
 from typing import Optional
 import appManager
+import nativeAppManager
+import systemControl
 
 # local imports (assuming files are saved separately)
 try:
@@ -115,13 +117,35 @@ def processCommand(command: str) -> None:
             speak(f"I couldn't find {song}. Available songs are: {available}")
         return
 
-    # Open apps/files/folders via appManager
+       # Open apps/files/folders via appManager
     if c.startswith("open "):
         target = c.replace("open ", "").strip()
-        if appManager.open_item(target):
+        if appManager.open_item(target) or nativeAppManager.open_system_app(target):
             speak(f"Opening {target}")
         else:
             speak(f"Sorry, I couldn't find {target}.")
+        return
+
+
+    # System control commands
+    if "shutdown" in c or "turn off" in c:
+        speak("Shutting down the system. Goodbye!")
+        systemControl.shutdown_system()
+        return
+
+    if "restart" in c or "reboot" in c:
+        speak("Restarting the system. Please wait.")
+        systemControl.restart_system()
+        return
+    
+    if "sleep" in c or "hibernate" in c:
+        speak("Putting the system to sleep.")
+        systemControl.sleep_system()
+        return
+    
+    if "lock" in c or "off" in c:
+        speak("Locking the system.")
+        systemControl.lock_system()
         return
     
     # Otherwise fallback to AI

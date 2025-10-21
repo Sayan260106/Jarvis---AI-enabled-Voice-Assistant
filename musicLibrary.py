@@ -1,10 +1,10 @@
 from typing import Dict, Optional
 
 _music: Dict[str, str] = {
-    "stealth": "https://www.youtube.com/watch?v=U47Tr9BB_wE",
-    "march": "https://www.youtube.com/watch?v=Xqeq4b5u_Xw",
+    "arijit singh": "https://youtu.be/kXHiIxx2atA?list=RDkXHiIxx2atA",
+    "krishna kumar": "https://youtu.be/r0c1f6XxRQg?list=RDr0c1f6XxRQg",
+    "imagine dragons": "https://youtu.be/5JOaTtcg1tE?list=RD5JOaTtcg1tE",
     "skyfall": "https://www.youtube.com/watch?v=DeumyOzKqgI",
-    "wolf": "https://www.youtube.com/watch?v=ThCH0U6aJpU",
 }
 
 
