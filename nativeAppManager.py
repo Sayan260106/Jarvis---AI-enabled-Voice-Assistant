@@ -10,9 +10,11 @@ SYSTEM_APPS = {
     "settings": "ms-settings:",
     "file explorer": "explorer.exe",
     "task manager": "taskmgr.exe",
-    "wordpad": "write.exe",
+    # "wordpad": "write.exe",
     "control panel": "control",
-    "notepad": "notepad.exe"
+    "notepad": "notepad.exe",
+    "word": "winword",
+    "presentation": "powerpnt.exe",
 }
 
 def open_system_app(name: str) -> bool:
